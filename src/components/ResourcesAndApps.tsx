@@ -1,20 +1,32 @@
+import img01 from "../assets/01.png";
+import img02 from "../assets/02.png";
+import img03 from "../assets/03.png";
+import img04 from "../assets/04.png";
+import img05 from "../assets/05.png";
+import img06 from "../assets/06.png";
+import img07 from "../assets/07.png";
+import img08 from "../assets/08.png";
+import img09 from "../assets/09.png";
+import img10 from "../assets/10.png";
+import img11 from "../assets/11.png";
+
 type AppLogo = {
     src: string;
     alt: string;
 };
 
 const apps: AppLogo[] = [
-    { src: '/src/assets/01.png', alt: 'App 01' },
-    { src: '/src/assets/02.png', alt: 'App 02' },
-    { src: '/src/assets/03.png', alt: 'App 03' },
-    { src: '/src/assets/04.png', alt: 'App 04' },
-    { src: '/src/assets/05.png', alt: 'App 05' },
-    { src: '/src/assets/06.png', alt: 'App 06' },
-    { src: '/src/assets/07.png', alt: 'App 07' },
-    { src: '/src/assets/08.png', alt: 'App 08' },
-    { src: '/src/assets/09.png', alt: 'App 09' },
-    { src: '/src/assets/10.png', alt: 'App 10' },
-    { src: '/src/assets/11.png', alt: 'App 11' },
+    { src: img01, alt: 'App 01' },
+    { src: img02, alt: 'App 02' },
+    { src: img03, alt: 'App 03' },
+    { src: img04, alt: 'App 04' },
+    { src: img05, alt: 'App 05' },
+    { src: img06, alt: 'App 06' },
+    { src: img07, alt: 'App 07' },
+    { src: img08, alt: 'App 08' },
+    { src: img09, alt: 'App 09' },
+    { src: img10, alt: 'App 10' },
+    { src: img11, alt: 'App 11' },
 ];
 
 const ResourcesAndApps = () => {

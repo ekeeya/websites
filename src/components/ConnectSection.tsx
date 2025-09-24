@@ -6,6 +6,8 @@ type ConnectCardProps = {
     className?: string;
 };
 
+import connectsBg from "../assets/connects-bg.png";
+
 const ConnectCard = (props: ConnectCardProps) => {
     const { title, description, imageSrc, accentClass = "bg-cyan-700", className } = props;
     return (
@@ -36,7 +38,7 @@ const ConnectCard = (props: ConnectCardProps) => {
 };
 
 const ConnectSection = () => {
-    const backgroundImageUrl = '/src/assets/connects-bg.png';
+    const backgroundImageUrl = connectsBg;
     return (
         <section className="relative h-[1200px] text-white bg-cover bg-center" style={{ backgroundImage: `url('${backgroundImageUrl}')` }}>
             {/* Left gradient overlay for readability */}

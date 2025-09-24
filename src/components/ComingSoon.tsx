@@ -1,5 +1,7 @@
+import dashboardBg from "../assets/dashboard-bg.png";
+
 const ComingSoon = () => {
-    const backgroundImageUrl = '/src/assets/dashboard-bg.png';
+    const backgroundImageUrl = dashboardBg;
     return (
         <section
             className="relative h-[750px] flex items-center justify-center text-white overflow-hidden"
