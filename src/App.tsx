@@ -1,0 +1,26 @@
+
+import './App.css'
+import Header from "./components/Header.tsx";
+import HeroSection from "./components/HeroSection.tsx";
+import HowItWorks from "./components/HowItWorks.tsx";
+import ConnectSection from "./components/ConnectSection.tsx";
+import ComingSoon from "./components/ComingSoon.tsx";
+import ResourcesAndApps from "./components/ResourcesAndApps.tsx";
+import Footer from "./components/Footer.tsx";
+
+function App() {
+
+  return (
+    <div className="flex flex-col h-full gap-0">
+        <Header/>
+        <HeroSection/>
+        <HowItWorks/>
+        <ConnectSection/>
+        <ComingSoon/>
+        <ResourcesAndApps/>
+        <Footer/>
+      </div>
+  )
+}
+
+export default App
