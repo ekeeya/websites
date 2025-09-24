@@ -7,6 +7,8 @@ type ConnectCardProps = {
 };
 
 import connectsBg from "../assets/connects-bg.png";
+import connect1 from "../assets/connect-1.jpg";
+import connect2 from "../assets/connect-2.png";
 
 const ConnectCard = (props: ConnectCardProps) => {
     const { title, description, imageSrc, accentClass = "bg-cyan-700", className } = props;
@@ -55,14 +57,14 @@ const ConnectSection = () => {
                 <ConnectCard
                     title="Panchayat Functionaries"
                     description="Enhanced capacity of Gram Panchayat functionaries and increased awareness of communities through use of technology."
-                    imageSrc="/src/assets/connect-1.jpg"
+                    imageSrc={connect1}
                     accentClass="bg-cyan-800"
                 />
 
                 <ConnectCard
                     title="Citizens"
                     description="Improved communication and information flow to rural communities, especially women, youth, and children."
-                    imageSrc="/src/assets/connect-2.png"
+                    imageSrc={connect2}
                     accentClass="bg-sky-800"
                 />
             </div>
