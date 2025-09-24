@@ -11,7 +11,7 @@ const HowItWorks = () => {
                 <div className="relative z-10 flex rounded-xl items-center bg-[#eaeedc] justify-start lg:justify-center p-2 w-full lg:w-1/4 h-auto translate-y-0 lg:-translate-y-[80%]">
                     <span className="text-2xl lg:text-4xl font-bold ml-4 lg:ml-0">How it Works</span>
                 </div>
-                <div className="flex flex-wrap xl:flex-nowrap items-stretch xl:items-center gap-3 lg:gap-4 xl:-space-x-2 px-3 xl:px-0 transition-all duration-300 ease-in-out">
+                <div className="flex flex-wrap xl:flex-nowrap items-stretch xl:items-center gap-3 lg:gap-4 xl:-space-x-2 px-3 xl:pr-16 transition-all duration-300 ease-in-out">
                     <HowItWorksDirection image={girl} text="Scan QR Code" />
                     <div className="hidden lg:block"><DividerPointer/></div>
                     <HowItWorksDirection image={girl1} text="Link takes you to PANCHAM on WhatsApp" />
