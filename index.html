@@ -6,11 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>Panchayati Raj</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Meetei+Mayek:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Preload Noto Sans Meetei Mayek for better performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Meetei+Mayek:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <title>PANCHAM - Panchayati Raj Advancement and Management</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Bhashini Translation Plugin -->
+    <script 
+      src="https://translation-plugin.bhashini.co.in/v2/website_translation_utility.js" 
+      data-pos-x="5" 
+      data-pos-y="10"
+      data-auto-translate="true">
+    </script>
+    
+    <!-- Font loading optimization -->
+    <script>
+      // Ensure Noto Sans Meetei Mayek font is loaded
+      if ('fonts' in document) {
+        document.fonts.ready.then(function() {
+          document.documentElement.classList.add('fonts-loaded');
+        });
+      }
+    </script>
   </body>
 </html>

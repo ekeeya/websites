@@ -9,9 +9,9 @@ import ResourcesAndApps from "./components/ResourcesAndApps.tsx";
 import Footer from "./components/Footer.tsx";
 
 function App() {
-
+  // Updated by kenn changes
   return (
-    <div className="flex flex-col h-full gap-0">
+    <div className="flex flex-col h-full gap-0 scroll-smooth">
         <Header/>
         <HeroSection/>
         <HowItWorks/>

@@ -46,14 +46,14 @@ const ResourcesAndApps = () => {
 
                 {/* Apps header */}
                 <div className="mt-14">
-                    <h3 className="text-4xl font-extrabold"><span className="text-gray-900">Other </span><span className="text-green-700">Applications</span></h3>
+                    <h3 className="text-4xl font-extrabold"><span className="text-[#3786A5]">Other </span><span className="text-[#53A537]">Applications</span></h3>
                 </div>
 
                 {/* Apps grid */}
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {apps.map((app, index) => (
                         <div key={index} className="bg-white rounded-xl h-36 flex items-center justify-center shadow">
-                            <img src={app.src} alt={app.alt} className="max-h-28 object-contain px-2" />
+                            <img src={app.src} alt={app.alt} className="max-h-28 object-contain px-2 bhashini-skip-translation" />
                         </div>
                     ))}
                 </div>

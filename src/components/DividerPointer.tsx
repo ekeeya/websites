@@ -1,4 +1,4 @@
-import {TbArrowRightDashed} from "react-icons/tb";
+import {TbArrowDownDashed, TbArrowRightDashed} from "react-icons/tb";
 
 const DividerPointer = ()=>{
     return(
@@ -6,7 +6,8 @@ const DividerPointer = ()=>{
             className="flex bg-[#eaeedc] items-center justify-center shadow-md rounded-full h-15 w-15"
             style={{ zIndex: 10 }}
         >
-            <TbArrowRightDashed size={30} />
+            <TbArrowRightDashed className="hidden lg:block" size={30} />
+            <TbArrowDownDashed className="block lg:hidden" size={30} />
         </div>
     )
 }
