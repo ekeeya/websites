@@ -45,7 +45,7 @@ const ConnectSection = () => {
             <div className="lg:hidden h-[349px]">
                 <img src={connectsBg} alt="Sensitization" className="h-full w-full object-cover object-[65%_center]" />
             </div>
-            <section className="relative h-[1200px] text-white">
+            <section className="relative h-[1200px] ml-[-20px] md:ml-0 text-white">
                 {/* Desktop background image */}
                 <div 
                     className="absolute inset-0 hidden lg:block bg-cover bg-center" 

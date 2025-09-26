@@ -2,7 +2,7 @@
 
 /* Global font - Noto Sans Meetei Mayek for proper language support */
 :root {
-  --app-font: "Noto Sans Meetei Mayek", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --app-font: "Noto Sans Meetei Mayek";
 }
 
 /* Apply Noto Sans Meetei Mayek as default font for all elements */
