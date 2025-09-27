@@ -1,5 +1,8 @@
 import HowItWorksDirection from "./HowItWorksDirection.tsx";
 import DividerPointer from "./DividerPointer.tsx";
+import girl from "../assets/girl.png";
+import girl1 from "../assets/girl-1.png";
+import girl2 from "../assets/girl-2.png";
 
 const HowItWorks = () => {
     return (
@@ -10,15 +13,15 @@ const HowItWorks = () => {
                 </div>
                 <div className="relative flex flex-wrap xl:flex-nowrap items-stretch xl:items-center gap-4 lg:gap-3 xl:gap-8 px-3 xl:px-0 transition-all duration-300 ease-in-out">
                     <HowItWorksDirection
-                        image="src/assets/girl.png"
+                        image={girl}
                         text="Scan QR Code"
                     />
                     <HowItWorksDirection
-                        image="src/assets/girl-1.png"
+                        image={girl1}
                         text="Link takes you to PANCHAM on WhatsApp"
                     />
                     <HowItWorksDirection
-                        image="src/assets/girl-2.png"
+                        image={girl2}
                         text="Get all answers in one place - PANCHAM"
                     />
                     
