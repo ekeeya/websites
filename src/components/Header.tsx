@@ -58,7 +58,7 @@ const Header = () => {
                     <a href="#home" className="text-green-600 hover:text-green-800 font-medium">Home</a>
                     <a href="#about" className="text-gray-800 hover:text-gray-600 font-medium">About</a>
                     <a href="#dashboard" className="text-gray-800 hover:text-gray-600 font-medium">Dashboard</a>
-                    <a href="#" className="text-gray-800 hover:text-gray-600 font-medium">Login</a>
+                    <a href="/login" className="text-gray-800 hover:text-gray-600 font-medium">Login</a>
                 </nav>
             </header>
 
@@ -110,22 +110,22 @@ const Header = () => {
                             <nav className="flex flex-col">
                                 <a href="#" className="px-2 py-4 text-green-400 hover:bg-gray-800 font-medium flex items-center space-x-3">
                                     <div className="w-3 h-3 border-2 border-green-400 rounded-full"></div>
-                                    
+
                                 </a>
                                 <a href="#" className="px-2 py-4 text-gray-300 hover:bg-gray-800 font-medium flex items-center space-x-3">
                                     <div className="w-3 h-3 bg-gray-600 border border-gray-500 rounded-full"></div>
                                 </a>
                                 <a href="#" className="px-2 py-4 text-gray-300 hover:bg-gray-800 font-medium flex items-center space-x-3">
                                     <div className="w-3 h-3 bg-gray-600 border border-gray-500 rounded-full"></div>
-                                
+
                                 </a>
                                 <a href="#" className="px-2 py-4 text-gray-300 hover:bg-gray-800 font-medium flex items-center space-x-3">
                                     <div className="w-3 h-3 bg-gray-600 border border-gray-500 rounded-full"></div>
-                                    
+
                                 </a>
                                 <a href="#" className="px-2 py-4 text-gray-300 hover:bg-gray-800 font-medium flex items-center space-x-3">
                                     <div className="w-3 h-3 bg-gray-600 border border-gray-500 rounded-full"></div>
-                                    
+
                                 </a>
                             </nav>
                             <div className="px-2 py-4">
