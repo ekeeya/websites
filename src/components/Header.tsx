@@ -92,7 +92,7 @@ const Header = () => {
                                     <div className="w-3 h-3 bg-gray-600 border border-gray-500 rounded-full"></div>
                                     <span>Dashboard</span>
                                 </a>
-                                <a href="#" onClick={(e) => e.stopPropagation()} className="px-6 py-4 text-gray-300 hover:bg-gray-800 font-medium flex items-center space-x-3">
+                                <a href="/login" onClick={(e) => e.stopPropagation()} className="px-6 py-4 text-gray-300 hover:bg-gray-800 font-medium flex items-center space-x-3">
                                     <div className="w-3 h-3 bg-gray-600 border border-gray-500 rounded-full"></div>
                                     <span>Login</span>
                                 </a>
