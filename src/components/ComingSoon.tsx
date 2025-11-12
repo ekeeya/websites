@@ -4,6 +4,7 @@ const ComingSoon = () => {
     const backgroundImageUrl = dashboardBg;
     return (
         <section
+            id="dashboard"
             className="relative lg:h-[750px] h-[249px] flex items-center justify-center text-white overflow-hidden"
             style={{ backgroundImage: `url('${backgroundImageUrl}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >

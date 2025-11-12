@@ -6,8 +6,8 @@ import girl2 from "../assets/girl-2.png";
 
 const HowItWorks = () => {
     return (
-        <div className="bg-[#eaeedc] pb-10">
-            <div className="flex flex-col mx-0 lg:ml-50 ">
+        <div id="about" className="bg-[#eaeedc] pb-10">
+            <div id="how-it-works" className="flex flex-col mx-0 lg:ml-50 ">
                 <div className="relative z-10 flex rounded-xl items-center bg-[#eaeedc] justify-start lg:justify-center p-2 w-full lg:w-1/4 h-auto translate-y-0 lg:-translate-y-[80%]">
                     <span className="text-3xl lg:text-4xl font-bold ml-4 lg:ml-0">How it Works</span>
                 </div>
