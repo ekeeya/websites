@@ -12,14 +12,17 @@ function App() {
   // Updated by kenn changes
   return (
     <div className="flex flex-col h-full gap-0 scroll-smooth">
-        <Header/>
-        <HeroSection/>
+        {/* HERO FRAME — 100vh on desktop */}
+        <div className="lg:h-screen flex flex-col">
+          <Header />
+          <HeroSection />
+        </div>
         <HowItWorks/>
         <ConnectSection/>
         <ComingSoon/>
         <ResourcesAndApps/>
         <Footer/>
-      </div>
+    </div>
   )
 }
 

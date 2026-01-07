@@ -27,11 +27,13 @@ const HowItWorks = () => {
                     
                     {/* Absolute positioned dividers */}
                     {/* Desktop: Horizontal arrows between cards */}
-                    <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-96 -translate-x-1/2 z-20">
-                        <DividerPointer/>
+                    {/* Desktop arrows — stable on all screens */}
+                    <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[21.4%] translate-x-1/2 z-20">
+                    <DividerPointer />
                     </div>
-                    <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[53%] -translate-x-1/2 z-20">
-                        <DividerPointer/>
+
+                    <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[49%] translate-x-1/2 z-20">
+                    <DividerPointer />
                     </div>
                     
                     {/* Mobile: Vertical arrows between cards */}

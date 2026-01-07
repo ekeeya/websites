@@ -7,7 +7,7 @@ import qrImg from "../assets/qrcode.png";
 const HeroSection = () => {
     const heroBgImage = heroBg;
     return (
-        <section id="home" className="relative overflow-hidden h-[700px] md:h-[780px] lg:h-[850px] flex items-center pt-28">
+        <section id="home" className="relative overflow-hidden h-[700px] md:h-[780px] lg:flex-1 flex items-center pt-28">
             {/* Zoomable background layer to avoid white gaps on smaller screens */}
             <div
                 className="absolute hidden lg:block inset-0 bg-cover transition-transform duration-500 ease-out scale-100 md:scale-[1.1] lg:scale-100"
@@ -33,8 +33,11 @@ const HeroSection = () => {
             </div>
 
             {/* Right Section with QR Code */}
-            <div className="hidden sm:block">
-                <QrCodeCard scanText="Scan here" qrCodeImage={qrImg} className="right-6 md:right-20 lg:right-32 transition-all duration-300 ease-in-out" />
+            <div className="hidden sm:block absolute bottom-8 right-6 md:bottom-12 md:right-16 lg:bottom-16 lg:right-24 z-20 w-32 md:w-40 lg:w-52">
+                <QrCodeCard
+                    scanText="Scan here"
+                    qrCodeImage={qrImg}
+                />
             </div>
         </section>
     );
