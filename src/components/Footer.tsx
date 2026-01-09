@@ -12,7 +12,7 @@ const Footer = () => {
         <footer className="bg-black text-gray-200">
             <div className="max-w-[1400px] mx-auto px-6 py-8 space-y-6">
                 <div className="flex items-center gap-5 justify-center">
-                    <a href="https://gpdp.nic.in/" target="_blank" className="text-lg">Privacy Policy</a>
+                    <a href="https://pancham.panchayat.gov.in/static/privacy_policy.html" target="_blank" className="text-lg">Privacy Policy</a>
                     <button
                         type="button"
                         onClick={toggleContact}
