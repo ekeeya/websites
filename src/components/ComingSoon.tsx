@@ -1,24 +1,56 @@
 import dashboardBg from "../assets/dashboard-bg.png";
+import dashImage from "../assets/dash.jpeg";
 
 const ComingSoon = () => {
-    const backgroundImageUrl = dashboardBg;
-    return (
-        <section
-            id="dashboard"
-            className="relative lg:h-[750px] h-[249px] flex items-center justify-center text-white overflow-hidden"
-            style={{ backgroundImage: `url('${backgroundImageUrl}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        >
-            {/* subtle dark overlay with blur */}
-            <div className="absolute inset-0 lg:bg-black/80 bg-black/60 backdrop-blur-md"></div>
+  return (
+    <section
+      id="dashboard"
+      className="relative lg:h-[750px] min-h-[55vh] flex items-center justify-center text-white overflow-hidden"
+    >
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url('${dashboardBg}')` }}
+      />
 
-            <div className="relative z-10 text-center">
-                <h2 className="lg:text-6xl text-4xl font-extrabold drop-shadow">Dashboard</h2>
-                <p className="mt-6 lg:text-2xl text-xl tracking-wide opacity-90">COMING SOON...</p>
+      {/* Overlay */}
+      <div className="absolute inset-0 lg:bg-black/80 bg-black/60 backdrop-blur-md" />
+
+      {/* Content */}
+      <div className="relative z-10 w-full h-full flex items-center justify-center px-4">
+
+        {/* Outer flex to horizontally center inner content */}
+        <div className="flex justify-center w-full">
+          
+          {/* Layout core */}
+          <div className="flex flex-col lg:flex-row items-start gap-6">
+
+            {/* Dashboard title */}
+            <h2 className="lg:text-5xl pt-2 lg:p-0 text-4xl font-bold drop-shadow">
+              Dashboard
+            </h2>
+
+            {/* Image + Know More */}
+            <div className="flex flex-col lg:flex-row gap-4 items-center lg:items-end">
+
+              <img
+                src={dashImage}
+                alt="dashboard preview"
+                className="w-[90%] lg:w-[70%] rounded-2xl"
+              />
+
+              <p className="lg:text-2xl text-xl whitespace-nowrap shrink-0 border border-white px-5 py-2 rounded-2xl">
+                Know more
+              </p>
+
             </div>
-        </section>
-    );
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ComingSoon;
-
-
