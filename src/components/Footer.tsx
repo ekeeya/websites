@@ -51,9 +51,6 @@ const Footer = () => {
                                     >
                                         pancham.mopr@nic.in
                                     </a>
-                                    <p className="mt-2 text-gray-400 text-sm">
-                                        We aim to respond within 2 working days.
-                                    </p>
                                 </div>
                             </div>
 
