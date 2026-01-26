@@ -4,6 +4,7 @@ type ConnectCardProps = {
     imageSrc: string;
     accentClass?: string;
     className?: string;
+    hidePointerOnDesktop?: boolean;
 };
 
 import connectsBg from "../assets/connects-bg.png";
@@ -11,15 +12,15 @@ import connect1 from "../assets/connect-1.jpg";
 import connect2 from "../assets/connect-2.png";
 
 const ConnectCard = (props: ConnectCardProps) => {
-    const { title, description, imageSrc, accentClass = "bg-cyan-700", className } = props;
+    const { title, description, imageSrc, accentClass = "bg-cyan-700", className, hidePointerOnDesktop = false } = props;
     return (
-        <div className={`relative bg-white rounded-3xl shadow-xl flex flex-col lg:flex-row items-stretch gap-6 p-2 w-76 lg:w-[720px] aspect-auto lg:aspect-[16/9] ${className || ""}`}>
+        <div className={`relative bg-white rounded-3xl shadow-xl flex flex-col lg:flex-row items-stretch gap-6 p-2  aspect-auto lg:aspect-[16/9] ${className || ""}`}>
             {/* Title badge (inside card) */}
             <div className={`absolute top-14 left-6 ${accentClass} text-white font-bold text-xl px-6 py-2 rounded-full shadow`}>{title}</div>
 
             {/* Exiting pointer from the middle of the title (single SVG so joint is perfect) */}
             <svg
-                className="absolute -left-15 ml-10 lg:ml-0 lg:-left-24 top-20 -translate-y-1/2 z-10 w-12 lg:w-32"
+                className={`absolute -left-15 ml-10 lg:ml-0 lg:-left-24 top-20 -translate-y-1/2 z-10 w-12 lg:w-32 ${hidePointerOnDesktop ? 'lg:hidden' : ''}`}
                 height="16"
                 viewBox="0 0 128 16"
                 fill="none"
@@ -45,7 +46,7 @@ const ConnectSection = () => {
             <div className="lg:hidden h-[349px]">
                 <img src={connectsBg} alt="Sensitization" className="h-full w-full object-cover object-[65%_center]" />
             </div>
-            <section className="relative h-[1200px] ml-[-20px] md:ml-0 text-white">
+            <section className="relative lg:h-[700px] h-[1200px] ml-[-20px] md:ml-0 w-full text-white">
                 {/* Desktop background image */}
                 <div 
                     className="absolute inset-0 hidden lg:block bg-cover bg-center" 
@@ -58,14 +59,35 @@ const ConnectSection = () => {
                 {/* Left gradient overlay for readability */}
                 <div className="absolute hidden lg:block inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/0"></div>
 
-                {/* Heading */}
-                <h2 className="absolute left-10 lg:left-16 top-12 lg:text-4xl text-2xl font-extrabold tracking-wide">PANCHAM Connects...</h2>
+                <div className="absolute left-10 lg:left-16 top-12 flex items-baseline gap-24">
+  <h2 className="lg:text-4xl text-2xl font-extrabold tracking-wide">
+    PANCHAM Connects...
+  </h2>
+
+  {/* Line + Arrow */}
+  <div className="hidden lg:flex z-10 items-start">
+    {/* horizontal line */}
+    <div className="w-[28vw] h-[3px] bg-cyan-400" />
+
+    {/* vertical + arrow at the END */}
+    <div className="flex flex-col -ml-2 items-center">
+      <div className="w-[3px] h-31 bg-cyan-400" />
+      <div
+        className="w-0 h-0 
+        border-l-7 border-r-7 border-t-12 
+        border-l-transparent border-r-transparent border-cyan-400"
+      />
+    </div>
+  </div>
+</div>
+
 
                 {/* Left vertical rail */}
-                <div className="absolute left-10 lg:left-16 top-28 lg:h-[598px] h-[654px] w-[4px] bg-cyan-400"></div>
+                <div className="absolute left-10 lg:left-16 top-28 lg:h-[128px] h-[654px] w-[4px] bg-cyan-400"></div>
 
                 {/* Cards stack */}
-                <div className="absolute left-15 lg:left-40 top-40 flex flex-col gap-8 lg:gap-16">
+                <div className="w-[90vw]">
+                <div className="absolute left-15 lg:left-40 top-40 flex flex-col lg:flex-row gap-8 lg:gap-16">
                     <ConnectCard
                         title="Panchayat Functionaries"
                         description="Enhanced capacity of Gram Panchayat functionaries and increased awareness of communities through use of technology."
@@ -78,7 +100,9 @@ const ConnectSection = () => {
                         description="Improved communication and information flow to rural communities, especially women, youth, and children."
                         imageSrc={connect2}
                         accentClass="bg-sky-800"
+                        hidePointerOnDesktop={true}
                     />
+                </div>
                 </div>
             </section>
         </div>
