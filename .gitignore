@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Large / local assets (do not commit)
+src/assets/2026-01-24 PANCHAYAT MPOR-FINAL-APPROVED.mp4
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
