@@ -15,7 +15,8 @@ import { FaPlayCircle, FaFilePdf, FaVideo } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 
-import launchVideo from "../assets/2026-01-24 PANCHAYAT MPOR-FINAL-APPROVED.mp4";
+import launchVideo from "../assets/2026-01-24-PANCHAYAT-MPOR-FINAL-APPROVED.mp4";
+import onBoardingVideo from "../assets/onBoardingVideo.mp4";
 import advisoryPdf from "../assets/Download Advisory.pdf";
 
 type ResourceItem = {
