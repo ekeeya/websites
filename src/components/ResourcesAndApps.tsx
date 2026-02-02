@@ -45,10 +45,7 @@ const resources: ResourceItem[] = [
     {
         title: "Onboarding video for ERs, PFs and Citizens",
         type: 'video',
-        // Placeholder until video is ready: add file to src/assets, then:
-        // import onboardingVideo from "../assets/your-onboarding-video.mp4";
-        // and set src: onboardingVideo
-        src: null,
+        src: onBoardingVideo,
         icon: FaVideo,
         colorClass: "text-blue-600"
     },
