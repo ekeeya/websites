@@ -11,7 +11,7 @@ import img10 from "../assets/10.png";
 import img11 from "../assets/11.png";
 import img12 from "../assets/ministy_of_panchayati.png";
 import img13 from "../assets/Bhashini_new.png";
-import { FaPlayCircle, FaFilePdf, FaVideo } from "react-icons/fa";
+import { FaPlayCircle, FaFilePdf } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 
@@ -46,15 +46,15 @@ const resources: ResourceItem[] = [
         title: "Onboarding video for ERs, PFs and Citizens",
         type: 'video',
         src: onBoardingVideo,
-        icon: FaVideo,
-        colorClass: "text-blue-600"
+        icon: FaPlayCircle,
+        colorClass: "text-red-600"
     },
     {
         title: "Advisory",
         type: 'document',
         src: advisoryPdf,
         icon: FaFilePdf,
-        colorClass: "text-red-500"
+        colorClass: "text-red-600"
     }
 ];
 
@@ -138,12 +138,31 @@ const ResourcesAndApps = () => {
                                         </div>
                                     )
                                 ) : (
-                                    <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-gray-50 to-gray-100 p-4">
-                                        <span className={`p-4 rounded-xl bg-white shadow-md ${resource.colorClass}`}>
-                                            <resource.icon className="w-12 h-12 md:w-14 md:h-14" />
-                                        </span>
-                                        <span className="text-xs font-semibold text-gray-600 uppercase tracking-wider text-center line-clamp-2">{resource.title} PDF</span>
-                                    </div>
+                                    resource.src ? (
+                                        <>
+                                            <iframe
+                                                src={resource.src}
+                                                className="w-full h-full pointer-events-none scale-100 origin-top-left"
+                                                title={`${resource.title} preview`}
+                                            />
+                                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/20 group-hover:bg-black/35 transition-colors p-4">
+                                                <span className={`rounded-full bg-white/95 p-4 ${resource.colorClass} shadow-xl group-hover:scale-110 transition-transform duration-300 ring-2 ring-white/50`}>
+                                                    <resource.icon className="w-10 h-10 md:w-12 md:h-12" />
+                                                </span>
+                                                <span className="text-white text-center font-semibold text-sm md:text-base drop-shadow-lg line-clamp-2 px-2">
+                                                    {resource.title}
+                                                </span>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-gray-50 to-gray-100 p-4 border-2 border-dashed border-gray-200">
+                                            <span className={`p-4 rounded-xl bg-white shadow-md ${resource.colorClass}`}>
+                                                <resource.icon className="w-12 h-12 md:w-14 md:h-14" />
+                                            </span>
+                                            <span className="text-xl font-semibold text-gray-600 text-center">Coming soon</span>
+                                            <span className="text-sm text-gray-500 text-center line-clamp-2 px-2">{resource.title}</span>
+                                        </div>
+                                    )
                                 )}
                             </div>
                         </button>
