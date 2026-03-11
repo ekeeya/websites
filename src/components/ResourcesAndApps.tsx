@@ -120,8 +120,8 @@ const ResourcesAndApps = () => {
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                             />
                                             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/25 group-hover:bg-black/40 transition-colors p-4">
-                                                <span className={`rounded-full bg-white/95 p-4 ${resource.colorClass} shadow-xl group-hover:scale-110 transition-transform duration-300 ring-2 ring-white/50`}>
-                                                    <resource.icon className="w-10 h-10 md:w-12 md:h-12" />
+                                                <span className={`rounded-full bg-white/95 p-2 ${resource.colorClass} shadow-xl group-hover:scale-110 transition-transform duration-300 ring-2 ring-white/50`}>
+                                                    <resource.icon className="w-9 h-9 xl:w-12 xl:h-12" />
                                                 </span>
                                                 <span className="text-white text-center font-semibold text-sm md:text-base drop-shadow-lg line-clamp-2 px-2">
                                                     {resource.title}
@@ -131,7 +131,7 @@ const ResourcesAndApps = () => {
                                     ) : (
                                         <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-blue-50 to-blue-100/80 p-4 border-2 border-dashed border-blue-200">
                                             <span className={`p-4 rounded-xl bg-white shadow-md ${resource.colorClass}`}>
-                                                <resource.icon className="w-12 h-12 md:w-14 md:h-14" />
+                                                <resource.icon className="w-9 h-9 xl:w-12 xl:h-12" />
                                             </span>
                                             <span className="text-xl font-semibold text-blue-700 text-center">Coming soon</span>
                                             <span className="text-sm text-gray-600 text-center line-clamp-2 px-2">{resource.title}</span>
@@ -146,8 +146,8 @@ const ResourcesAndApps = () => {
                                                 title={`${resource.title} preview`}
                                             />
                                             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/20 group-hover:bg-black/35 transition-colors p-4">
-                                                <span className={`rounded-full bg-white/95 p-4 ${resource.colorClass} shadow-xl group-hover:scale-110 transition-transform duration-300 ring-2 ring-white/50`}>
-                                                    <resource.icon className="w-10 h-10 md:w-12 md:h-12" />
+                                                <span className={`rounded-full bg-white/95 p-2 ${resource.colorClass} shadow-xl group-hover:scale-110 transition-transform duration-300 ring-2 ring-white/50`}>
+                                                    <resource.icon className="w-9 h-9 xl:w-12 xl:h-12" />
                                                 </span>
                                                 <span className="text-white text-center font-semibold text-sm md:text-base drop-shadow-lg line-clamp-2 px-2">
                                                     {resource.title}

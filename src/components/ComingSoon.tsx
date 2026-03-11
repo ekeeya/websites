@@ -5,7 +5,7 @@ const ComingSoon = () => {
   return (
     <section
       id="dashboard"
-      className="relative lg:h-[750px] min-h-[55vh] flex items-center justify-center text-white overflow-hidden"
+      className="relative lg:h-[70vh] xl:h-[85vh] min-h-[55vh] flex items-center justify-center text-white overflow-hidden"
     >
       {/* Background image */}
       <div
@@ -23,10 +23,10 @@ const ComingSoon = () => {
         <div className="flex justify-center w-full">
           
           {/* Layout core */}
-          <div className="flex flex-col lg:flex-row items-start gap-6">
+          <div className="flex flex-col lg:flex-row lg:ml-10 items-start gap-6">
 
             {/* Dashboard title */}
-            <h2 className="lg:text-5xl pt-2 lg:p-0 text-4xl font-bold drop-shadow">
+            <h2 className="text-3xl xl:text-5xl pt-2 lg:p-0 lg:text-4xl font-bold drop-shadow">
               Dashboard
             </h2>
 
@@ -36,12 +36,12 @@ const ComingSoon = () => {
               <img
                 src={dashImage}
                 alt="dashboard preview"
-                className="w-[90%] lg:w-[70%] rounded-2xl"
+                className="w-[90%] xl:w-[70%] lg:w-[60%] rounded-2xl"
               />
 
-              <p className="lg:text-2xl text-xl whitespace-nowrap shrink-0 border border-white px-5 py-2 rounded-2xl">
+              <button className="font-semibold whitespace-nowrap shrink-0 border border-white px-8 py-3 rounded-full">
                 Know more
-              </p>
+              </button>
 
             </div>
 

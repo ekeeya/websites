@@ -1,10 +1,10 @@
 type ConnectCardProps = {
-    title: string;
-    description: string;
-    imageSrc: string;
-    accentClass?: string;
-    className?: string;
-    hidePointerOnDesktop?: boolean;
+  title: string;
+  description: string;
+  imageSrc: string;
+  accentClass?: string;
+  className?: string;
+  hidePointerOnDesktop?: boolean;
 };
 
 import connectsBg from "../assets/connects-bg.png";
@@ -12,101 +12,98 @@ import connect1 from "../assets/connect-1.jpg";
 import connect2 from "../assets/connect-2.png";
 
 const ConnectCard = (props: ConnectCardProps) => {
-    const { title, description, imageSrc, accentClass = "bg-cyan-700", className, hidePointerOnDesktop = false } = props;
-    return (
-        <div className={`relative bg-white rounded-3xl shadow-xl flex flex-col lg:flex-row items-stretch gap-6 p-2  aspect-auto lg:aspect-[16/9] ${className || ""}`}>
-            {/* Title badge (inside card) */}
-            <div className={`absolute top-14 left-6 ${accentClass} text-white font-bold text-xl px-6 py-2 rounded-full shadow`}>{title}</div>
+  const {
+    title,
+    description,
+    imageSrc,
+    accentClass = "bg-cyan-700",
+    className,
+  } = props;
+  return (
+    <div
+      className={`relative bg-white rounded-3xl shadow-xl flex flex-col lg:flex-row items-stretch gap-4 lg:gap-2 xl:gap-6 p-2 aspect-auto lg:aspect-[16/9] ${className || ""}`}
+    >
+      {/* Title badge (inside card) */}
+      <div
+        className={`absolute top-14 lg:top-8 xl:top-14 left-6 ${accentClass} text-white font-bold text-lg lg:text-base xl:text-xl px-5 lg:px-4 xl:px-6 py-2 lg:py-1 xl:py-2 rounded-full shadow`}
+      >
+        {title}
+      </div>
 
-            {/* Exiting pointer from the middle of the title (single SVG so joint is perfect) */}
-            <svg
-                className={`absolute -left-15 ml-10 lg:ml-0 lg:-left-24 top-20 -translate-y-1/2 z-10 w-12 lg:w-32 ${hidePointerOnDesktop ? 'lg:hidden' : ''}`}
-                height="16"
-                viewBox="0 0 128 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <line x1="0" y1="8" x2="108" y2="8" stroke="#22D3EE" strokeWidth="10" strokeLinecap="round" className="lg:stroke-[3]" />
-                <line x1="108" y1="2" x2="120" y2="8" stroke="#22D3EE" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" className="lg:stroke-[3]" />
-                <line x1="108" y1="14" x2="120" y2="8" stroke="#22D3EE" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" className="lg:stroke-[3]" />
-            </svg>
-
-            <div className="flex-1 px-6 left-6 text-gray-900 mt-30">
-                <p className="text-lg lg:text-xl leading-7">{description}</p>
-            </div>
-            <img src={imageSrc} alt="context" className="w-full lg:w-[44%] h-48 lg:h-full object-cover rounded-xl bhashini-skip-translation" />
-        </div>
-    );
+      <div className="flex-1 px-4 lg:px-4 xl:px-6 left-6 text-gray-900 mt-30 lg:mt-24 xl:mt-30 overflow-y-auto">
+        <p className="text-lg lg:text-sm xl:text-lg leading-7 lg:leading-normal xl:leading-7">
+          {description}
+        </p>
+      </div>
+      <img
+        src={imageSrc}
+        alt="context"
+        className="w-full lg:w-[44%] h-48 lg:h-full object-cover rounded-xl bhashini-skip-translation"
+      />
+    </div>
+  );
 };
 
 const ConnectSection = () => {
-    const backgroundImageUrl = connectsBg;
-    return (
-        <div className="flex flex-col">
-            <div className="lg:hidden h-[349px]">
-                <img src={connectsBg} alt="Sensitization" className="h-full w-full object-cover object-[65%_center]" />
+  const backgroundImageUrl = connectsBg;
+  return (
+    <div className="flex flex-col">
+      <div className="lg:hidden h-[349px]">
+        <img
+          src={connectsBg}
+          alt="Sensitization"
+          className="h-full w-full object-cover object-[65%_center]"
+        />
+      </div>
+      <section className="relative lg:h-[560px] xl:h-[650px] h-[1200px] w-full text-white">
+        {/* Background */}
+        <div
+          className="absolute inset-0 hidden lg:block bg-cover bg-[right_20%_bottom_1%]"
+          style={{ backgroundImage: `url('${backgroundImageUrl}')` }}
+        />
+
+        <div className="absolute inset-0 bg-black/80 lg:hidden" />
+
+        <div className="absolute hidden lg:block inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/0" />
+
+        {/* Center container */}
+        <div className="relative z-10 flex flex-col items-center lg:items-start pt-12">
+          {/* Inner wrapper controls alignment */}
+          <div className="w-[90vw] max-w-[1200px] mx-auto">
+            {/* Title */}
+            <h2 className="text-2xl xl:text-4xl font-extrabold tracking-wide mb-12">
+              PANCHAM Connects...
+            </h2>
+
+            {/* Cards */}
+            {/* Cards */}
+            <div className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-16">
+              <ConnectCard
+                title="Panchayat Functionaries"
+                description="Enhanced capacity of Gram Panchayat functionaries and increased awareness of communities through use of technology."
+                imageSrc={connect1}
+                accentClass="bg-cyan-800"
+              />
+
+              <ConnectCard
+                title="Citizens"
+                description="Improved communication and information flow to rural communities, especially women, youth, and children."
+                imageSrc={connect2}
+                accentClass="bg-sky-800"
+              />
             </div>
-            <section className="relative lg:h-[700px] h-[1200px] ml-[-20px] md:ml-0 w-full text-white">
-                {/* Desktop background image */}
-                <div 
-                    className="absolute inset-0 hidden lg:block bg-cover bg-center" 
-                    style={{ backgroundImage: `url('${backgroundImageUrl}')` }}
-                ></div>
-                
-                {/* Mobile background overlay */}
-                <div className="absolute inset-0 bg-black/80 lg:hidden"></div>
-                
-                {/* Left gradient overlay for readability */}
-                <div className="absolute hidden lg:block inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/0"></div>
 
-                <div className="absolute left-10 lg:left-16 top-12 flex items-baseline gap-24">
-  <h2 className="lg:text-4xl text-2xl font-extrabold tracking-wide">
-    PANCHAM Connects...
-  </h2>
-
-  {/* Line + Arrow */}
-  <div className="hidden lg:flex z-10 items-start">
-    {/* horizontal line */}
-    <div className="w-[28vw] h-[3px] bg-cyan-400" />
-
-    {/* vertical + arrow at the END */}
-    <div className="flex flex-col -ml-2 items-center">
-      <div className="w-[3px] h-31 bg-cyan-400" />
-      <div
-        className="w-0 h-0 
-        border-l-7 border-r-7 border-t-12 
-        border-l-transparent border-r-transparent border-cyan-400"
-      />
-    </div>
-  </div>
-</div>
-
-
-                {/* Left vertical rail */}
-                <div className="absolute left-10 lg:left-16 top-28 lg:h-[128px] h-[654px] w-[4px] bg-cyan-400"></div>
-
-                {/* Cards stack */}
-                <div className="w-[90vw]">
-                <div className="absolute left-15 lg:left-40 top-40 flex flex-col lg:flex-row gap-8 lg:gap-16">
-                    <ConnectCard
-                        title="Panchayat Functionaries"
-                        description="Enhanced capacity of Gram Panchayat functionaries and increased awareness of communities through use of technology."
-                        imageSrc={connect1}
-                        accentClass="bg-cyan-800"
-                    />
-
-                    <ConnectCard
-                        title="Citizens"
-                        description="Improved communication and information flow to rural communities, especially women, youth, and children."
-                        imageSrc={connect2}
-                        accentClass="bg-sky-800"
-                        hidePointerOnDesktop={true}
-                    />
-                </div>
-                </div>
-            </section>
+            {/* Center Button */}
+            <div className="flex justify-center mt-12">
+              <button className="border border-white transition-colors text-white font-semibold px-8 py-3 rounded-full shadow-lg">
+                Know more
+              </button>
+            </div>
+          </div>
         </div>
-    );
+      </section>
+    </div>
+  );
 };
 
 export default ConnectSection;

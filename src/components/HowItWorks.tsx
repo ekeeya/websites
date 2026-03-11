@@ -7,11 +7,11 @@ import girl2 from "../assets/girl-2.png";
 const HowItWorks = () => {
     return (
         <div id="about" className="bg-[#eaeedc] pb-10">
-            <div id="how-it-works" className="flex flex-col mx-0 lg:ml-50 ">
+            <div id="how-it-works" className="flex flex-col mx-0 lg:ml-20 xl:ml-50 ">
                 <div className="relative z-10 flex rounded-xl items-center bg-[#eaeedc] justify-start lg:justify-center p-2 w-full lg:w-1/4 h-auto translate-y-0 lg:-translate-y-[80%]">
-                    <span className="text-3xl lg:text-4xl font-bold ml-4 lg:ml-0">How it Works</span>
+                    <span className="text-3xl lg:text-2xl xl:text-4xl font-bold ml-4 lg:ml-0">How it Works</span>
                 </div>
-                <div className="relative flex flex-wrap xl:flex-nowrap items-stretch xl:items-center gap-4 lg:gap-3 xl:gap-8 px-3 xl:px-0 transition-all duration-300 ease-in-out">
+                <div className="relative flex flex-wrap lg:flex-nowrap items-stretch xl:items-center gap-4 lg:gap-3 xl:gap-8 px-3 xl:px-0 transition-all duration-300 ease-in-out">
                     <HowItWorksDirection
                         image={girl}
                         text="Scan QR Code"

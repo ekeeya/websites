@@ -7,6 +7,7 @@ import ConnectSection from "./components/ConnectSection.tsx";
 import ComingSoon from "./components/ComingSoon.tsx";
 import ResourcesAndApps from "./components/ResourcesAndApps.tsx";
 import Footer from "./components/Footer.tsx";
+import About from './components/About.tsx';
 
 function App() {
   // Updated by kenn changes
@@ -17,8 +18,9 @@ function App() {
           <Header />
           <HeroSection />
         </div>
-        <HowItWorks/>
+        <About/>
         <ConnectSection/>
+        <HowItWorks/>
         <ComingSoon/>
         <ResourcesAndApps/>
         <Footer/>
